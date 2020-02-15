@@ -38,8 +38,8 @@ def filterMilsav(ifname, ofname):
     ofile.close()
 
 tw = mn.TwitterBot()
-
-tw.loginTwitter(1)
+# if you have multiple accounts in the data.py file, the variable passed here decides which one is used
+tw.loginTwitter(0)
 
 # scrapeFollowers('vaki_smithy', 'followerAts.txt')
 # profilesInfoSave('followerAts.txt', 'profilesInfo.txt')
