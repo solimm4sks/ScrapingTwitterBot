@@ -62,6 +62,15 @@ class TwitterBot:
 
         self.closePopup()
 
+    def post(self, text):
+        textField = self.driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div/main/div/div/div/div[1]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div[1]/div[1]/div/div/div/div[2]/div/div/div/div')
+        postButton = self.driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div/main/div/div/div/div[1]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div/div[2]/div[4]/div')
+        textField.send_keys(text)
+        postButton.click()
+
+        self.driver.get('https://twitter.com/home')
+        sleep(2)
+
     def openProfile(self, profileName):
         self.driver.get('https://twitter.com/' + profileName)
         sleep(2)

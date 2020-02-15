@@ -2,8 +2,8 @@ import main as mp
 from time import sleep
 import random
 
-# ddone.txt is a file with countries (in their possesive adjective form)
-countryFile = open("ddone.txt", "r")
+# countries.txt is a file with countries (in their possesive adjective form)
+countryFile = open("countries.txt", "r")
 countryString = countryFile.read()
 countryFile.close()
 countryList = countryString.split(',')
