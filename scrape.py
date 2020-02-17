@@ -2,7 +2,7 @@ import main as mn
 
 # used to get a list of users that follower a certain profile
 def scrapeFollowers(name, ofname):
-    Followers = tw.getProfileFollowerList(name, 2)
+    Followers = list(tw.getProfileFollowerList(name, 2))
     folFile = open(ofname, 'w+')
     for x in Followers:
         folFile.write(x)
